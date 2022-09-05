@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printptr.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kduru <kduru@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/06 01:56:37 by kduru             #+#    #+#             */
+/*   Updated: 2022/09/06 01:56:38 by kduru            ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int check_max_min (unsigned long long num)
+int	check_max_min(unsigned long long num)
 {
 	if ((long)num == 9223372036854775807)
 	{
@@ -25,12 +37,12 @@ int check_max_min (unsigned long long num)
 	return (0);
 }
 
-int find_len (size_t num)
+int	find_len(size_t num)
 {
 	int	length;
 
 	length = 0;
-	while(num)
+	while (num)
 	{
 		length++;
 		num /= 16;
@@ -38,7 +50,7 @@ int find_len (size_t num)
 	return (length);
 }
 
-void convert_to_hex(size_t num)
+void	convert_to_hex(size_t num)
 {
 	if (num >= 16)
 	{
@@ -56,7 +68,7 @@ void convert_to_hex(size_t num)
 
 int	ft_print_ptr(unsigned long long ptr)
 {
-	int length;
+	int	length;
 
 	length = 0;
 	length += write(1, "0x", 2);

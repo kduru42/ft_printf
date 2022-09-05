@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_unsigned.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kduru <kduru@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/06 01:55:14 by kduru             #+#    #+#             */
+/*   Updated: 2022/09/06 01:55:16 by kduru            ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-int ft_put_unsigned (size_t num)
+int	ft_put_unsigned(size_t num)
 {
-	int	length;
+	int		length;
 	size_t	temp;
 
 	length = 0;
@@ -21,7 +33,6 @@ int ft_put_unsigned (size_t num)
 		ft_putchar_fd(num + 48, 1);
 	return (length);
 }
-
 
 int	ft_print_unsigned(unsigned int num)
 {

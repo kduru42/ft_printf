@@ -1,8 +1,18 @@
-#include "ft_printf.h"
-#include <stdio.h>
-#include <limits.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kduru <kduru@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/06 01:55:39 by kduru             #+#    #+#             */
+/*   Updated: 2022/09/06 01:55:40 by kduru            ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_formats (va_list args, const char format)
+#include "ft_printf.h"
+
+int	ft_formats(va_list args, const char format)
 {
 	int	length;
 
@@ -10,7 +20,7 @@ int ft_formats (va_list args, const char format)
 	if (format == 'c')
 		length += ft_print_char(va_arg(args, int));
 	else if (format == 's')
-		length += ft_print_string(va_arg(args, char*));
+		length += ft_print_string(va_arg(args, char *));
 	else if (format == 'p')
 		length += ft_print_ptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
@@ -28,8 +38,8 @@ int ft_formats (va_list args, const char format)
 
 int	ft_printf(const char *str, ...)
 {
-	int	i;
-	int	length;
+	int		i;
+	int		length;
 	va_list	args;
 
 	i = 0;

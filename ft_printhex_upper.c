@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printhex_upper.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kduru <kduru@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/06 01:56:17 by kduru             #+#    #+#             */
+/*   Updated: 2022/09/06 01:56:18 by kduru            ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-void convert_to_hex_upper(size_t num)
+void	convert_to_hex_upper(size_t num)
 {
 	if (num >= 16)
 	{
@@ -10,7 +22,7 @@ void convert_to_hex_upper(size_t num)
 	else
 	{
 		if (num <= 9)
-			ft_putnbr_fd(num + '0', 1);
+			ft_putnbr_fd(num, 1);
 		else
 			ft_putchar_fd(num - 10 + 'A', 1);
 	}

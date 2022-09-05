@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_percent.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kduru <kduru@student.42kocaeli.com.tr>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/06 01:55:01 by kduru             #+#    #+#             */
+/*   Updated: 2022/09/06 01:55:02 by kduru            ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
+
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
@@ -51,7 +64,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n + 48, fd);
 }
 
-int ft_print_percent (void)
+int	ft_print_percent(void)
 {
 	write(1, "%", 1);
 	return (1);
