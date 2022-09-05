@@ -16,10 +16,13 @@ int ft_print_percent (void);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-int ft_put_unsigned (unsigned int num);
+int ft_put_unsigned (size_t num);
 int ft_formats (va_list args, const char format);
-int convert_to_hex_upper(int num);
-int convert_to_hex_lower(int num);
+void convert_to_hex_upper(size_t num);
+void convert_to_hex_lower(size_t num);
 void	ft_putstr(char *str);
+void convert_to_hex(size_t num);
+int check_max_min (unsigned long long num);
+int find_len (size_t num);
 
 #endif

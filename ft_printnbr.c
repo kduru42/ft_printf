@@ -6,6 +6,10 @@ int	ft_printnbr(int num)
 
 	length = 0;
 	ft_putnbr_fd(num,1);
+	if (num == 0)
+		return (1);
+	if (num < 0)
+		length++;
 	while (num)
 	{
 		length++;

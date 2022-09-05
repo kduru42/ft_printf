@@ -1,9 +1,9 @@
 #include "ft_printf.h"
 
-int ft_put_unsigned (unsigned int num)
+int ft_put_unsigned (size_t num)
 {
 	int	length;
-	int	temp;
+	size_t	temp;
 
 	length = 0;
 	temp = num;
@@ -31,6 +31,6 @@ int	ft_print_unsigned(unsigned int num)
 	if (num == 0)
 		length += write(1, "0", 1);
 	else
-		length += ft_print_unsigned(num);
+		length += ft_put_unsigned(num);
 	return (length);
 }

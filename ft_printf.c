@@ -1,5 +1,6 @@
 #include "ft_printf.h"
-//#include <stdio.h>
+#include <stdio.h>
+#include <limits.h>
 
 int ft_formats (va_list args, const char format)
 {
@@ -50,11 +51,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (length);
-}
-
-int main()
-{
-	ft_printf(" NULL %s NULL ", NULL);
-
-	return 0;
 }

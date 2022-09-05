@@ -1,10 +1,7 @@
 #include "ft_printf.h"
 
-int convert_to_hex_lower(int num)
+void convert_to_hex_lower(size_t num)
 {
-	int	length;
-
-	length = 0;
 	if (num >= 16)
 	{
 		convert_to_hex_lower(num / 16);
@@ -12,13 +9,11 @@ int convert_to_hex_lower(int num)
 	}
 	else
 	{
-		if (num <= 9)
-			ft_putnbr_fd(num + '0', 1);
+		if (num < 10)
+			ft_putnbr_fd(num, 1);
 		else
 			ft_putchar_fd(num - 10 + 'a', 1);
-		length++;
 	}
-	return (length);
 }
 
 int	ft_print_hex_lower(unsigned int num)
@@ -29,6 +24,9 @@ int	ft_print_hex_lower(unsigned int num)
 	if (num == 0)
 		length += write(1, "0", 1);
 	else
-		length += convert_to_hex_lower(num);
+	{
+		convert_to_hex_lower(num);
+		length += find_len(num);
+	}
 	return (length);
 }
