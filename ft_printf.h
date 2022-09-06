@@ -36,5 +36,9 @@ void	ft_putstr(char *str);
 void	convert_to_hex(size_t num);
 int		check_max_min(unsigned long long num);
 int		find_len(size_t num);
+int		ft_print_octal(unsigned int num);
+void 	convert_to_octal(size_t num);
+int 	find_len_octal(size_t num);
+int 	ft_format_bonus(va_list args, const char format, const char *str, int i);
 
 #endif
